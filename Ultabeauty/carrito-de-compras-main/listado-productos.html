@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css"> <!-- CSS de DataTable -->
+    
+    <link rel="stylesheet" href="estilos.css"> <!-- Cambiado el nombre aquí -->
+    <title>UltaBeauty - Productos</title>
+</head>
+<body>
+    <header>
+        <h1>ULTABEAUTY</h1>
+        <img src="img/encabezado.jpg" alt="Encabezado" class="img-fluid"> <!-- Imagen del encabezado -->
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">UltaBeauty</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <h2 class="my-4">Listado de Productos de Maquillaje</h2>
+        <table id="myTable" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Base Líquida</td>
+                    <td>Base de Maquillaje</td>
+                    <td>$300.00</td>
+                    <td>Base líquida ligera con acabado natural.</td>
+                </tr>
+                <tr>
+                    <td>Corrector</td>
+                    <td>Base de Maquillaje</td>
+                    <td>$150.00</td>
+                    <td>Corrector de alta cobertura para ojeras y manchas.</td>
+                </tr>
+                <tr>
+                    <td>Paleta de Sombras</td>
+                    <td>Ojos</td>
+                    <td>$450.00</td>
+                    <td>Paleta de sombras con tonos mate y shimmer.</td>
+                </tr>
+                <tr>
+                    <td>Máscara de Pestañas</td>
+                    <td>Ojos</td>
+                    <td>$200.00</td>
+                    <td>Máscara para dar volumen y longitud a las pestañas.</td>
+                </tr>
+                <tr>
+                    <td>Delineador Líquido</td>
+                    <td>Ojos</td>
+                    <td>$120.00</td>
+                    <td>Delineador de fácil aplicación y larga duración.</td>
+                </tr>
+                <tr>
+                    <td>Rubor en Crema</td>
+                    <td>Rostro</td>
+                    <td>$250.00</td>
+                    <td>Rubor cremoso para un acabado fresco.</td>
+                </tr>
+                <tr>
+                    <td>Iluminador</td>
+                    <td>Rostro</td>
+                    <td>$280.00</td>
+                    <td>Iluminador en polvo para un brillo sutil.</td>
+                </tr>
+                <tr>
+                    <td>Labial Mate</td>
+                    <td>Labios</td>
+                    <td>$200.00</td>
+                    <td>Labial mate de larga duración.</td>
+                </tr>
+                <tr>
+                    <td>Brillo de Labios</td>
+                    <td>Labios</td>
+                    <td>$150.00</td>
+                    <td>Brillo hidratante para labios suaves.</td>
+                </tr>
+                <tr>
+                    <td>Spray Fijador</td>
+                    <td>Cuidado de Maquillaje</td>
+                    <td>$300.00</td>
+                    <td>Spray para fijar el maquillaje durante todo el día.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="help-section">
+                <h4>¿NECESITAS AYUDA?</h4>
+                <p>Escríbenos a <a href="mailto:atencion@ultabeauty.com">atencion@ultabeauty.com</a></p>
+                <p>o Llámanos al <a href="tel:8007374072">+52 8123614736</a></p>
+                <p>Lunes a Sábado de 9 am a 9 pm</p>
+            </div>
+            <div class="links-section">
+                <h4>SALUD ES BELLEZA</h4>
+                <ul>
+                    <li><a href="#">Más Vendidos</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Regalos Exclusivos</a></li>
+                    <li><a href="#">Experiencias Sephora</a></li>
+                </ul>
+            </div>
+            <div class="customer-service">
+                <h4>ATENCIÓN AL CLIENTE</h4>
+                <ul>
+                    <li><a href="#">Términos & Condiciones</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Ubicaciones de tiendas</a></li>
+                    <li><a href="#">Entrega</a></li>
+                    <li><a href="#">Facturación</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="about-us">
+                <h4>ACERCA DE NOSOTROS</h4>
+                <ul>
+                    <li><a href="#">Acerca de Sephora</a></li>
+                    <li><a href="#">Aviso de Privacidad</a></li>
+                    <li><a href="#">Oportunidades Laborales</a></li>
+                    <li><a href="#">Mapa del sitio</a></li>
+                </ul>
+            </div>
+            <div class="payment-methods">
+                <h4>FORMAS DE PAGO</h4>
+                <ul>
+                    <li>
+                        <img src="img/visa.png" alt="Visa" />
+                        <span>Tarjeta de Crédito</span>
+                    </li>
+                    <li>
+                        <img src="img/mastercard.png" alt="MasterCard" />
+                        <span>Tarjeta de Débito</span>
+                    </li>
+                    <li>
+                        <img src="img/paypal.png" alt="PayPal" />
+                        <span>PayPal</span>
+                    </li>
+                    <li>
+                        <img src="img/transfer.png" alt="Transferencia Bancaria" />
+                        <span>Transferencia Bancaria</span>
+                    </li>
+                    <li>
+                        <img src="img/delivery.png" alt="Contra Entrega" />
+                        <span>Contra entrega</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let table = new DataTable('#myTable'); // Inicializa el DataTable
+        });
+    </script>
+</body>
+</html>

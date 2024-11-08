@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Maquillaje</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: #e7e7e7;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #a82d2d;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #a82d2d;
+            border-bottom: 2px solid #434343;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #e2e2e2c8;
+            color: #a82d2d;
+            font-weight: 600;
+        }
+        td {
+            font-size: 14px;
+            color: #ae4646;
+        }
+        .btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        .btn-add { background-color: #4caf50; }
+        .btn-edit { background-color: #ff9800; }
+        .btn-delete { background-color: #f44336; }
+        .form-control {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .form-group label {
+            flex: 1;
+            font-weight: 600;
+        }
+        .form-group input {
+            flex: 3;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .chart {
+            width: 48%;
+        }
+    </style>
+    <!-- Incluyendo Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>Panel de Administración - UltaBeauty</header>
+
+    <!-- Main content -->
+    <main>
+
+        <!-- Sección Reportes de Ventas -->
+        <section id="reportes-ventas">
+            <h2>Reportes de Ventas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Fecha</th>
+                        <th>Ventas</th>
+                        <th>Ingresos</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Base de Maquillaje</td>
+                        <td>2024-11-01</td>
+                        <td>50</td>
+                        <td>$500.00</td>
+                        <td>Completado</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Paleta de Sombras</td>
+                        <td>2024-11-02</td>
+                        <td>35</td>
+                        <td>$420.00</td>
+                        <td>Fallido</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Lápiz Labial</td>
+                        <td>2024-11-03</td>
+                        <td>60</td>
+                        <td>$720.00</td>
+                        <td>Completado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección Gestión de Usuarios -->
+        <section id="gestion-usuarios">
+            <h2>Gestión de Usuarios</h2>
+            <div class="form-group">
+                <label for="user-name">Nombre de Usuario:</label>
+                <input type="text" id="user-name" class="form-control" placeholder="Ingrese nombre">
+            </div>
+            <div class="form-group">
+                <label for="user-email">Email:</label>
+                <input type="email" id="user-email" class="form-control" placeholder="Ingrese email">
+            </div>
+            <button class="btn btn-add">Agregar Usuario</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jaqueline Alvarez</td>
+                        <td>jaqui@example.com</td>
+                        <td>Administrador</td>
+                        <td>
+                            <button class="btn btn-edit">Editar</button>
+                            <button class="btn btn-delete">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ana Sanchez</td>
+                        <td>luisa@example.com</td>
+                        <td>Usuario</td>
+                        <td>
+                            <button class="btn btn-edit">Editar</button>
+                            <button class="btn btn-delete">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Maria Díaz</td>
+                        <td>maria@example.com</td>
+                        <td>Usuario</td>
+                        <td>
+                            <button class="btn btn-edit">Editar</button>
+                            <button class="btn btn-delete">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección Gráficos de Ventas y Tráfico de Usuarios -->
+        <section id="graficos">
+            <h2>Gráficos de Ventas y Tráfico de Usuarios</h2>
+            <div class="chart-container">
+                <!-- Gráfico de Barras -->
+                <div class="chart">
+                    <canvas id="ventasChart"></canvas>
+                </div>
+                <!-- Gráfico de Pastel -->
+                <div class="chart">
+                    <canvas id="traficoChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Gráfico de Barras para Ventas
+        const ventasCtx = document.getElementById('ventasChart').getContext('2d');
+        new Chart(ventasCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Ventas Mensuales',
+                    data: [120, 150, 100, 180, 75, 90],
+                    backgroundColor: '#a82d2d',
+                    borderColor: '#a82d2d',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Gráfico de Pastel para Tráfico de Usuarios
+        const traficoCtx = document.getElementById('traficoChart').getContext('2d');
+        new Chart(traficoCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Directo', 'Referencias', 'Social', 'Email'],
+                datasets: [{
+                    label: 'Tráfico de Usuarios',
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#a82d2d', '#e87e7e', '#ffc1c1', '#ffdddd']
+                }]
+            }
+        });
+    </script>
+
+</body>
+</html>

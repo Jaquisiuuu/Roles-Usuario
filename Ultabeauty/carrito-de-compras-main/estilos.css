@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+}
+
+header {
+    text-align: center; /* Centra el texto en el encabezado */
+    margin-top: 56px; /* Ajusta para que esté justo debajo del navbar */
+}
+
+header h1 {
+    font-size: 50px;
+    color: #000000;
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+header img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área asignada */
+    margin-top: -77px;
+}
+
+
+body {
+    overflow-x: hidden; 
+}
+
+.footer {
+    background-color: #000000; /* Color de fondo del footer */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Asegura que las secciones se distribuyan */
+}
+
+.footer h4 {
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio inferior para títulos */
+    color: #fff; /* Enlaces en blanco */
+}
+
+.footer p, .footer ul {
+    margin: 0; /* Quitar margen de párrafos y listas */
+    padding: 0; /* Quitar padding de listas */
+    color: #fff; /* Enlaces en blanco */
+}
+
+.footer ul {
+    list-style: none; /* Quitar viñetas de listas */
+    padding: 0; /* Quitar padding */
+    color: #fff; /* Enlaces en blanco */
+}
+
+.footer ul li {
+    margin-bottom: 5px; /* Espacio entre ítems de lista */
+    color: #fff; /* Enlaces en blanco */
+}
+
+.footer img {
+    width: 30px; /* Ancho de imágenes en el footer */
+    height: auto; /* Mantener proporciones */
+}

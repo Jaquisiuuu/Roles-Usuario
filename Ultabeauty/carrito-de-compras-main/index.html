@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js" async></script>
+    <title>UltaBeauty</title>
+</head>
+<body>
+    <header>
+        <h1>ULTABEAUTY</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">UltaBeauty</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modo-oscuro">
+        <button id="modoOscuro">
+            Cambiar a Modo Oscuro</button>
+    </div>
+    
+    
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">LABIAL BISSU</span>
+                <img src="img/labial.png" alt="Box Engasse" class="img-item">
+                <span class="precio-item">$800</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Brocha</span>
+                <img src="img/brocha2.png" alt="Reloj Minimalista" class="img-item">
+                <span class="precio-item">$500</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Polvo Compacto</span>
+                <img src="img/compacto2.png" alt="Reloj Deportivo" class="img-item">
+                <span class="precio-item">$1200</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Maybelline</span>
+                <img src="img/lipstick.png" alt="Reloj de Lujo" class="img-item">
+                <span class="precio-item">$300</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items"></div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0</span>
+                </div>
+                <div class="fila">
+                    <label for="codigo-descuento">Código de Descuento:</label>
+                    <input type="text" id="codigo-descuento" placeholder="Introduce tu código">
+                </div>
+        
+                <!-- Nuevo input para puntos de lealtad -->
+                <div class="fila">
+                    <label for="puntos-lealtad">Puntos de Lealtad:</label>
+                    <input type="number" id="puntos-lealtad" value="0" min="0"> <!-- Cerrando correctamente el input -->
+                </div>
+                <button class="btn-pagar">Pagar</button>
+            </div>
+        </div>
+    </section>
+    <div class="text-center mt-4">
+        <a href="listado-productos.html" class="btn-ver-productos">Ver listado de productos</a>
+    </div>
+    <section class="quienes-somos">
+        <div class="container">
+            <h2>Quiénes Somos</h2>
+            <div class="quienes-somos-contenido">
+                <h3 class="subtitulo">Historia de la Empresa</h3>
+                <p>UltaBeauty fue fundada con la misión de ofrecer una amplia gama de productos de belleza que inspiren a las personas a expresarse a través del maquillaje. Desde su creación, nos hemos dedicado a proporcionar productos de alta calidad a precios accesibles.</p>
+                
+                <h3 class="subtitulo">Misión</h3>
+                <p>Nuestra misión es empoderar a nuestros clientes a sentirse seguros y bellos a través de productos innovadores y de calidad.</p>
+                
+                <h3 class="subtitulo">Visión</h3>
+                <p>Ser la tienda de belleza preferida a nivel nacional, ofreciendo la mejor experiencia de compra y un amplio portafolio de productos.</p>
+                
+                <h3 class="subtitulo">Valores</h3>
+                <p>Calidad, innovación, diversidad y atención al cliente.</p>
+            </div>
+        </div>
+    </section>
+    ...
+    <!-- Sección Equipo -->
+    <section class="equipo">
+        <h2>Equipo</h2>
+        <div class="miembros-equipo">
+            <div class="miembro">
+                <img src="img/mujer2.png" alt="Nombre del Miembro 1" class="foto-miembro">
+                <h3>Jaqueline Alvarez Ruiz</h3>
+                <p>Fundadora y Directora Creativa. Apasionada por el maquillaje y la belleza, lidera el desarrollo de productos innovadores y estrategias de marketing que reflejan las últimas tendencias en el mundo de la cosmética.</p>
+            </div>
+            <div class="miembro">
+                <img src="img/dama.png" alt="Nombre del Miembro 2" class="foto-miembro">
+                <h3>Monica Alvarez Ruiz</h3>
+                <p>Gerente de Ventas. Con una sólida experiencia en el sector minorista, se encarga de construir relaciones sólidas con nuestros clientes y garantizar que tengan la mejor experiencia de compra posible.</p>
+            </div>
+            <div class="miembro">
+                <img src="img/empleada.png" alt="Nombre del Miembro 3" class="foto-miembro">
+                <h3>Esperanza Ruiz</h3>
+                <p>Especialista en Maquillaje. Con una profunda comprensión de las técnicas de maquillaje, ofrece asesoría a los clientes y organiza talleres para compartir su pasión por la belleza y el arte del maquillaje.</p>
+            </div>
+        </div>
+    </section>
+    ...
+    <div class="carrusel">
+        <div class="slides">
+            <div class="slide active">
+                <div class="seccion">
+                    <img src="img/blush.jpg" alt="UltaBeauty Collection">
+                    <p>ULTABEAUTY COLLECTION</p>
+                </div>
+                <div class="seccion">
+                    <img src="img/shampoo.jpg" alt="Cuidado del Cabello">
+                    <p>CUIDADO DEL CABELLO</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="seccion">
+                    <img src="img/perfumes.jpg" alt="Fragancias">
+                    <p>FRAGANCIAS</p>
+                </div>
+                <div class="seccion">
+                    <img src="img/nars.jpg" alt="Maquillaje">
+                    <p>MAQUILLAJE</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="seccion">
+                    <img src="img/cuidado.jpg" alt="Cuidado de la Piel">
+                    <p>CUIDADO DE LA PIEL</p>
+                </div>
+                <div class="seccion">
+                    <img src="img/crema.jpg" alt="Cuidado de la Piel">
+                    <p>CREMAS CORPORALES</p> <!-- Cambia esta imagen y texto según sea necesario -->
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="cambiarSlide(-1)">&#10094;</button>
+        <button class="next" onclick="cambiarSlide(1)">&#10095;</button>
+    </div>
+    <!-- Nueva Sección de Reseñas sobre la Atención al Cliente -->
+<section id="seccion-reseñas">
+    <h2>Reseñas sobre la Atención al Cliente</h2>
+
+    <div class="filtro-reseñas">
+        <label for="filtro">Filtrar por:</label>
+        <select id="filtro-reseñas">
+            <option value="todas">Todas las reseñas</option>
+            <option value="positivas">Reseñas positivas</option>
+            <option value="negativas">Reseñas negativas</option>
+        </select>
+    </div>
+
+    <div id="contenedor-reseñas" class="contenedor-reseñas">
+    <!-- Las reseñas se agregarán aquí dinámicamente -->
+</div>
+
+    <div id="nueva-reseña">
+        <h3>Deja tu reseña sobre nuestra atención al cliente</h3>
+        <textarea id="texto-reseña" placeholder="Escribe aquí tu opinión sobre la atención que recibiste..."></textarea>
+        <div id="calificacion-estrellas">
+            <span data-valor="1">&#9733;</span>
+            <span data-valor="2">&#9733;</span>
+            <span data-valor="3">&#9733;</span>
+            <span data-valor="4">&#9733;</span>
+            <span data-valor="5">&#9733;</span>
+        </div>
+        <button id="btn-enviar-reseña">Enviar Reseña</button>
+    </div>
+
+    <p id="calificacion-promedio">Calificación promedio de atención: 0</p>
+</section>
+
+    
+    <div class="footer-subscription">
+        <h3>Suscríbete para recibir correos electrónicos de UltaBeauty</h3>
+        <p>Infórmese también de las promociones de primera mano.</p>
+        <input type="text" id="nombre" placeholder="Ingresa nombre">
+        <input type="email" id="email" placeholder="Ingresa correo electrónico">
+        <button id="btnRegistrar" onclick="simularRegistro()">REGISTRAR</button>
+        <p id="mensaje"></p>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="help-section">
+                <h4>¿NECESITAS AYUDA?</h4>
+                <p>Escríbenos a <a href="mailto:atencion@ultabeauty.com">atencion@ultabeautycom</a></p>
+                <p>o Llámanos al <a href="tel:8007374072">+52 8123614736</a></p>
+                <p>Lunes a Sábado de 9 am a 9 pm</p>
+            </div>
+            <div class="links-section">
+                <h4>SALUD ES BELLEZA</h4>
+                <ul>
+                    <li><a href="#">Más Vendidos</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Regalos Exclusivos</a></li>
+                    <li><a href="#">Experiencias Sephora</a></li>
+                </ul>
+            </div>
+            <div class="customer-service">
+                <h4>ATENCIÓN AL CLIENTE</h4>
+                <ul>
+                    <li><a href="#">Términos & Condiciones</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Ubicaciones de tiendas</a></li>
+                    <li><a href="#">Entrega</a></li>
+                    <li><a href="#">Facturación</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="about-us">
+                <h4>ACERCA DE NOSOTROS</h4>
+                <ul>
+                    <li><a href="#">Acerca de Sephora</a></li>
+                    <li><a href="#">Aviso de Privacidad</a></li>
+                    <li><a href="#">Oportunidades Laborales</a></li>
+                    <li><a href="#">Mapa del sitio</a></li>
+                </ul>
+            </div>
+            <div class="payment-methods">
+                <h4>FORMAS DE PAGO</h4>
+                <ul>
+                    <li>
+                        <img src="img/visa.png" alt="Visa" />
+                        <span>Tarjeta de Crédito</span>
+                    </li>
+                    <li>
+                        <img src="img/mastercard.png" alt="MasterCard" />
+                        <span>Tarjeta de Débito</span>
+                    </li>
+                    <li>
+                        <img src="img/paypal.png" alt="PayPal" />
+                        <span>PayPal</span>
+                    </li>
+                    <li>
+                        <img src="img/transfer.png" alt="Transferencia Bancaria" />
+                        <span>Transferencia Bancaria</span>
+                    </li>
+                    <li>
+                        <img src="img/delivery.png" alt="Contra Entrega" />
+                        <span>Contra entrega</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer> 
+    </body>
+    </html>
